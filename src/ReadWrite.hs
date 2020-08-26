@@ -34,19 +34,3 @@ handleArgs :: [String] -> String -> IO ()
 handleArgs [fn] _  = readAndReplaceSection fn
 handleArgs _    pn = putStrLn $ "usage: " <> pn <> " contents.md"
 
-{-
-
-readAndAppendToLine :: Char -> IO ()
-readAndAppendToLine c = do
-  ln <- TIO.getLine
-  TIO.putStrLn $ T.cons c ln
-  addChar c
-
-addChar :: Char -> IO ()
-addChar c = do
-  eof <- isEOF
-  if eof
-    then return ()
-    else readAndAppendToLine c
-
--}
