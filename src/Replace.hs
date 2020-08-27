@@ -22,12 +22,8 @@ ifPrefix prefix actionTrue actionFalse = do
   ln <- TIO.getLine
   ifM (T.isPrefixOf prefix ln) (actionTrue ln) (actionFalse ln)
 
-putSection' :: [Text] -> IO ()
-putSection' []     = return ()
-putSection' (t:ts) = TIO.putStrLn t >> putSection' ts
-
 putSection :: NonEmpty Text -> IO ()
-putSection = putSection' . NE.toList
+putSection = foldr ((>>) . TIO.putStrLn) (return ()) 
 
 -- checking lines
 -- before the section
@@ -71,5 +67,5 @@ readAfter = do
 
 -- renamed for exporting
 replaceSection :: NonEmpty Text -> IO ()
-replaceSection newContent = readBefore newContent
+replaceSection = readBefore
 

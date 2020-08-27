@@ -4,10 +4,10 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: b15e8bef8a2a8d4eeee418f204e8cf3cf8c4079acb3318681a27eb4d6b5493e7
+-- hash: a7e713e9556fec02b0056833eccdb2c82b3dff98da8d33b0f2214e5f5c7dd737
 
 name:           replace-md
-version:        0.1.0.0
+version:        0.1.0.2
 description:    Please see the README on GitHub at <https://github.com/paasim/replace-md#readme>
 homepage:       https://github.com/paasim/replace-md#readme
 bug-reports:    https://github.com/paasim/replace-md/issues
