@@ -1,4 +1,6 @@
-# insert-section
+# replace-md
+
+[![build status](https://github.com/paasim/replace-md/workflows/check/badge.svg)](https://github.com/paasim/replace-md/actions)
 
 A haskell command-line tool for inserting/replacing sections in markdown-documents.
 
